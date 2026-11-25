@@ -4,6 +4,15 @@
 
 export const environment = {
   production: false,
+
+   firebase: {
+  apiKey: "AIzaSyClUCV9YaEi-cJCsiHmJf6akm9Vx6osv0I",
+  authDomain: "movieapp-12e12.firebaseapp.com",
+  projectId: "movieapp-12e12",
+  storageBucket: "movieapp-12e12.firebasestorage.app",
+  messagingSenderId: "867903870396",
+  appId: "1:867903870396:web:0e88c44fa1954eb52147b9"
+}
 };
 
 /*

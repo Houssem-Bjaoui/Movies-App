@@ -8,7 +8,7 @@ export interface UserProfile {
   firstName: string;
   lastName: string;
   age: number;
-  photoURL: string | null;
+  photoPath: string | null;
   role: UserRole;
   status: UserStatus;
   favoriteGenres: number[];
