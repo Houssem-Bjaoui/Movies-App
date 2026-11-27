@@ -53,6 +53,22 @@ export class AuthService {
         return auth.currentUser;
     }
 
+
+
+    //on attend firebase de verifier la connexion de l'utilisateur et on retourne l'utilisateur connecté ou null si pas connecté
+    waitForAuthState(): Promise<User | null> {
+        return new Promise((resolve) => {
+            let unsubscribe : (() => void) | undefined ;
+
+            unsubscribe = onAuthStateChanged(auth, (user) => {
+                
+                unsubscribe?.();
+                // kn user mawjoud nraj3ouh sinon null
+                resolve(user);
+            });
+        });
+    }
+
     //houni bch nra9bou l'utilisateur connecté wala le 
     onAuthStateChanged(callback: (user: User | null) => void): () => void {
         return onAuthStateChanged(auth, (user) => {
